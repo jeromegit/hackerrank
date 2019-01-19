@@ -5,7 +5,7 @@ import random
 import re
 import sys
 
-from unittest import TestCase    
+import unittest
 
 # Vector version of all 3x3 magic squares
 # Source: http://www.dr-mikes-math-games-for-kids.com/3x3-magic-square.html
@@ -36,10 +36,14 @@ def formingMagicSquare(s):
     return minDiff
 
 # Test cases
-class FormingMagicSquareTest(TestCase):
+class FormingMagicSquareTest(unittest.TestCase):
     def test1(self):
         self.assertEqual(formingMagicSquare([[4, 9, 2], [3, 5, 7], [8, 1, 5]]), 1)
         
     def test2(self):
         self.assertEqual(formingMagicSquare([[4, 8, 2], [4, 5, 7], [6, 1, 6]]), 4)
+
+if __name__ == '__main__':
+    unittest.main()
+
                                             
